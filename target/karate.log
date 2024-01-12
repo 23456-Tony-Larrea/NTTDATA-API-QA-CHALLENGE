@@ -1,0 +1,656 @@
+00:01:20.650 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 7 - ^Actualizar el nombre de la mascota y el estatus de la mascota a \“sold\”$
+00:01:21.905 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet/9223372016900013808?petId=9223372016900013808&name=junior-toby&status=sold
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_392)
+1 > Accept-Encoding: gzip,deflate
+
+
+00:01:22.473 [main] DEBUG com.intuit.karate - response time in milliseconds: 566
+1 < 200
+1 < Date: Fri, 12 Jan 2024 05:01:23 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"code":200,"type":"unknown","message":"9223372016900013808"}
+00:01:23.237 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/features/updatePet.feature
+00:10:35.336 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1705036235335
+00:10:35.363 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 9 - ^Consultar la mascota modificada por estatus \(Búsqueda por estatus \= sold\)$
+00:10:36.579 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_392)
+1 > Accept-Encoding: gzip,deflate
+
+
+00:10:37.394 [main] DEBUG com.intuit.karate - response time in milliseconds: 814
+1 < 200
+1 < Date: Fri, 12 Jan 2024 05:10:38 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":9223372016900013808,"category":{"id":0,"name":"string"},"name":"junior-toby","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":111111,"category":{"id":11111,"name":"string"},"name":"puppy","photoUrls":["string"],"tags":[{"id":111,"name":"string"}],"status":"sold"},{"id":9223372016900014348,"category":{"id":83089521,"name":"aute"},"name":"doggie","photoUrls":["esse ea dese","proident sunt non"],"tags":[{"id":-7333794,"name":"deserunt reprehenderit"},{"id":-49874740,"name":"consequat aliqua magna officia"}],"status":"sold"},{"id":12084391,"category":{"id":-48583,"name":"cupidatat amet commodo"},"name":"doggie","photoUrls":["fugiat Ut eu","exercitation nostr"],"tags":[{"id":-27183415,"name":"e"},{"id":86979382,"name":"in anim consectetur Lorem ut"}],"status":"sold"},{"id":9223372016900014381,"category":{"id":2299282,"name":"officia d"},"name":"doggie","photoUrls":["veniam ad","consectetur laboris anim"],"tags":[{"id":6282852,"name":"aliqua deserunt irure do Excepteur"},{"id":-79344316,"name":"dolor veniam non Ut"}],"status":"sold"}]
+00:10:37.459 [main] ERROR com.intuit.karate - src/test/java/features/GetStatusPet.feature:15
+* match each pets == {status: 'sold'}
+match failed: EACH_EQUALS
+  $ | match each failed at index 0 (LIST:MAP)
+  [{"id":9223372016900013808,"category":{"id":0,"name":"string"},"name":"junior-toby","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":111111,"category":{"id":11111,"name":"string"},"name":"puppy","photoUrls":["string"],"tags":[{"id":111,"name":"string"}],"status":"sold"},{"id":9223372016900014348,"category":{"id":83089521,"name":"aute"},"name":"doggie","photoUrls":["esse ea dese","proident sunt non"],"tags":[{"id":-7333794,"name":"deserunt reprehenderit"},{"id":-49874740,"name":"consequat aliqua magna officia"}],"status":"sold"},{"id":12084391,"category":{"id":-48583,"name":"cupidatat amet commodo"},"name":"doggie","photoUrls":["fugiat Ut eu","exercitation nostr"],"tags":[{"id":-27183415,"name":"e"},{"id":86979382,"name":"in anim consectetur Lorem ut"}],"status":"sold"},{"id":9223372016900014381,"category":{"id":2299282,"name":"officia d"},"name":"doggie","photoUrls":["veniam ad","consectetur laboris anim"],"tags":[{"id":6282852,"name":"aliqua deserunt irure do Excepteur"},{"id":-79344316,"name":"dolor veniam non Ut"}],"status":"sold"}]
+  {"status":"sold"}
+
+    $[0] | not equal | actual has 5 more key(s) than expected - {"id":9223372016900013808,"category":{"id":0,"name":"string"},"name":"junior-toby","photoUrls":["string"],"tags":[{"id":0,"name":"string"}]} (MAP:MAP)
+    {"id":9223372016900013808,"category":{"id":0,"name":"string"},"name":"junior-toby","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+    {"status":"sold"}
+
+
+src/test/java/features/GetStatusPet.feature:15
+00:10:38.051 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/features/GetStatusPet.feature
+00:11:25.695 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1705036285694
+00:11:25.720 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 9 - ^Consultar la mascota modificada por estatus \(Búsqueda por estatus \= sold\)$
+00:11:26.857 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_392)
+1 > Accept-Encoding: gzip,deflate
+
+
+00:11:27.491 [main] DEBUG com.intuit.karate - response time in milliseconds: 630
+1 < 200
+1 < Date: Fri, 12 Jan 2024 05:11:28 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":9223372016900013808,"category":{"id":0,"name":"string"},"name":"junior-toby","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":111111,"category":{"id":11111,"name":"string"},"name":"puppy","photoUrls":["string"],"tags":[{"id":111,"name":"string"}],"status":"sold"},{"id":9223372016900014348,"category":{"id":83089521,"name":"aute"},"name":"doggie","photoUrls":["esse ea dese","proident sunt non"],"tags":[{"id":-7333794,"name":"deserunt reprehenderit"},{"id":-49874740,"name":"consequat aliqua magna officia"}],"status":"sold"},{"id":12084391,"category":{"id":-48583,"name":"cupidatat amet commodo"},"name":"doggie","photoUrls":["fugiat Ut eu","exercitation nostr"],"tags":[{"id":-27183415,"name":"e"},{"id":86979382,"name":"in anim consectetur Lorem ut"}],"status":"sold"},{"id":9223372016900014381,"category":{"id":2299282,"name":"officia d"},"name":"doggie","photoUrls":["veniam ad","consectetur laboris anim"],"tags":[{"id":6282852,"name":"aliqua deserunt irure do Excepteur"},{"id":-79344316,"name":"dolor veniam non Ut"}],"status":"sold"}]
+00:11:27.556 [main] ERROR com.intuit.karate - src/test/java/features/GetStatusPet.feature:15
+* match each pets.status == 'sold'
+match failed: EACH_EQUALS
+  $ | actual is not an array or list (STRING:STRING)
+  '#notpresent'
+  'sold'
+
+src/test/java/features/GetStatusPet.feature:15
+00:11:28.153 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/features/GetStatusPet.feature
+00:11:55.686 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1705036315685
+00:11:55.712 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 8 - ^Consultar la mascota modificada por estatus \(Búsqueda por estatus \= sold\)$
+00:11:56.823 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_392)
+1 > Accept-Encoding: gzip,deflate
+
+
+00:11:57.692 [main] DEBUG com.intuit.karate - response time in milliseconds: 867
+1 < 200
+1 < Date: Fri, 12 Jan 2024 05:11:59 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":9223372016900013808,"category":{"id":0,"name":"string"},"name":"junior-toby","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":111111,"category":{"id":11111,"name":"string"},"name":"puppy","photoUrls":["string"],"tags":[{"id":111,"name":"string"}],"status":"sold"},{"id":9223372016900014348,"category":{"id":83089521,"name":"aute"},"name":"doggie","photoUrls":["esse ea dese","proident sunt non"],"tags":[{"id":-7333794,"name":"deserunt reprehenderit"},{"id":-49874740,"name":"consequat aliqua magna officia"}],"status":"sold"},{"id":12084391,"category":{"id":-48583,"name":"cupidatat amet commodo"},"name":"doggie","photoUrls":["fugiat Ut eu","exercitation nostr"],"tags":[{"id":-27183415,"name":"e"},{"id":86979382,"name":"in anim consectetur Lorem ut"}],"status":"sold"},{"id":9223372016900014381,"category":{"id":2299282,"name":"officia d"},"name":"doggie","photoUrls":["veniam ad","consectetur laboris anim"],"tags":[{"id":6282852,"name":"aliqua deserunt irure do Excepteur"},{"id":-79344316,"name":"dolor veniam non Ut"}],"status":"sold"}]
+00:11:57.719 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'response' with new value: response
+00:11:57.861 [main] INFO  com.intuit.karate - [print] [
+  {
+    "id": 9223372016900013808,
+    "category": {
+      "id": 0,
+      "name": "string"
+    },
+    "name": "junior-toby",
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [
+      {
+        "id": 0,
+        "name": "string"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 111111,
+    "category": {
+      "id": 11111,
+      "name": "string"
+    },
+    "name": "puppy",
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [
+      {
+        "id": 111,
+        "name": "string"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 9223372016900014348,
+    "category": {
+      "id": 83089521,
+      "name": "aute"
+    },
+    "name": "doggie",
+    "photoUrls": [
+      "esse ea dese",
+      "proident sunt non"
+    ],
+    "tags": [
+      {
+        "id": -7333794,
+        "name": "deserunt reprehenderit"
+      },
+      {
+        "id": -49874740,
+        "name": "consequat aliqua magna officia"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 12084391,
+    "category": {
+      "id": -48583,
+      "name": "cupidatat amet commodo"
+    },
+    "name": "doggie",
+    "photoUrls": [
+      "fugiat Ut eu",
+      "exercitation nostr"
+    ],
+    "tags": [
+      {
+        "id": -27183415,
+        "name": "e"
+      },
+      {
+        "id": 86979382,
+        "name": "in anim consectetur Lorem ut"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 9223372016900014381,
+    "category": {
+      "id": 2299282,
+      "name": "officia d"
+    },
+    "name": "doggie",
+    "photoUrls": [
+      "veniam ad",
+      "consectetur laboris anim"
+    ],
+    "tags": [
+      {
+        "id": 6282852,
+        "name": "aliqua deserunt irure do Excepteur"
+      },
+      {
+        "id": -79344316,
+        "name": "dolor veniam non Ut"
+      }
+    ],
+    "status": "sold"
+  }
+]
+ 
+00:11:57.883 [main] ERROR com.intuit.karate - src/test/java/features/GetStatusPet.feature:15
+* match each pets == {status: 'sold'}
+match failed: EACH_EQUALS
+  $ | match each failed at index 0 (LIST:MAP)
+  [{"id":9223372016900013808,"category":{"id":0,"name":"string"},"name":"junior-toby","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":111111,"category":{"id":11111,"name":"string"},"name":"puppy","photoUrls":["string"],"tags":[{"id":111,"name":"string"}],"status":"sold"},{"id":9223372016900014348,"category":{"id":83089521,"name":"aute"},"name":"doggie","photoUrls":["esse ea dese","proident sunt non"],"tags":[{"id":-7333794,"name":"deserunt reprehenderit"},{"id":-49874740,"name":"consequat aliqua magna officia"}],"status":"sold"},{"id":12084391,"category":{"id":-48583,"name":"cupidatat amet commodo"},"name":"doggie","photoUrls":["fugiat Ut eu","exercitation nostr"],"tags":[{"id":-27183415,"name":"e"},{"id":86979382,"name":"in anim consectetur Lorem ut"}],"status":"sold"},{"id":9223372016900014381,"category":{"id":2299282,"name":"officia d"},"name":"doggie","photoUrls":["veniam ad","consectetur laboris anim"],"tags":[{"id":6282852,"name":"aliqua deserunt irure do Excepteur"},{"id":-79344316,"name":"dolor veniam non Ut"}],"status":"sold"}]
+  {"status":"sold"}
+
+    $[0] | not equal | actual has 5 more key(s) than expected - {"id":9223372016900013808,"category":{"id":0,"name":"string"},"name":"junior-toby","photoUrls":["string"],"tags":[{"id":0,"name":"string"}]} (MAP:MAP)
+    {"id":9223372016900013808,"category":{"id":0,"name":"string"},"name":"junior-toby","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"}
+    {"status":"sold"}
+
+
+src/test/java/features/GetStatusPet.feature:15
+00:11:58.293 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/features/GetStatusPet.feature
+00:13:03.657 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1705036383656
+00:13:04.796 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_392)
+1 > Accept-Encoding: gzip,deflate
+
+
+00:13:05.462 [main] DEBUG com.intuit.karate - response time in milliseconds: 663
+1 < 200
+1 < Date: Fri, 12 Jan 2024 05:13:06 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":9223372016900013808,"category":{"id":0,"name":"string"},"name":"junior-toby","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":111111,"category":{"id":11111,"name":"string"},"name":"puppy","photoUrls":["string"],"tags":[{"id":111,"name":"string"}],"status":"sold"},{"id":9223372016900014348,"category":{"id":83089521,"name":"aute"},"name":"doggie","photoUrls":["esse ea dese","proident sunt non"],"tags":[{"id":-7333794,"name":"deserunt reprehenderit"},{"id":-49874740,"name":"consequat aliqua magna officia"}],"status":"sold"},{"id":12084391,"category":{"id":-48583,"name":"cupidatat amet commodo"},"name":"doggie","photoUrls":["fugiat Ut eu","exercitation nostr"],"tags":[{"id":-27183415,"name":"e"},{"id":86979382,"name":"in anim consectetur Lorem ut"}],"status":"sold"},{"id":9223372016900014381,"category":{"id":2299282,"name":"officia d"},"name":"doggie","photoUrls":["veniam ad","consectetur laboris anim"],"tags":[{"id":6282852,"name":"aliqua deserunt irure do Excepteur"},{"id":-79344316,"name":"dolor veniam non Ut"}],"status":"sold"}]
+00:13:06.028 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/features/GetStatusPet.feature
+00:15:24.887 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1705036524886
+00:15:24.912 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 9 - ^Consultar la mascota con estatus y nombre y status sold$
+00:15:26.018 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold&name=junior-toby
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_392)
+1 > Accept-Encoding: gzip,deflate
+
+
+00:15:26.733 [main] DEBUG com.intuit.karate - response time in milliseconds: 714
+1 < 200
+1 < Date: Fri, 12 Jan 2024 05:15:28 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":9223372016900013808,"category":{"id":0,"name":"string"},"name":"junior-toby","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":111111,"category":{"id":11111,"name":"string"},"name":"puppy","photoUrls":["string"],"tags":[{"id":111,"name":"string"}],"status":"sold"},{"id":9223372016900014348,"category":{"id":83089521,"name":"aute"},"name":"doggie","photoUrls":["esse ea dese","proident sunt non"],"tags":[{"id":-7333794,"name":"deserunt reprehenderit"},{"id":-49874740,"name":"consequat aliqua magna officia"}],"status":"sold"},{"id":12084391,"category":{"id":-48583,"name":"cupidatat amet commodo"},"name":"doggie","photoUrls":["fugiat Ut eu","exercitation nostr"],"tags":[{"id":-27183415,"name":"e"},{"id":86979382,"name":"in anim consectetur Lorem ut"}],"status":"sold"},{"id":9223372016900014381,"category":{"id":2299282,"name":"officia d"},"name":"doggie","photoUrls":["veniam ad","consectetur laboris anim"],"tags":[{"id":6282852,"name":"aliqua deserunt irure do Excepteur"},{"id":-79344316,"name":"dolor veniam non Ut"}],"status":"sold"}]
+00:15:26.883 [main] ERROR com.intuit.karate - src/test/java/features/GetStatusPet.feature:13
+Then match response.name == 'junior-toby' && response.status == 'sold'
+match failed: EQUALS
+  $ | actual path does not exist (STRING:BOOLEAN)
+  '#notpresent'
+  false
+
+src/test/java/features/GetStatusPet.feature:13
+00:15:27.326 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/features/GetStatusPet.feature
+00:15:54.349 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1705036554348
+00:15:54.374 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 9 - ^Consultar la mascota con estatus y nombre y status sold$
+00:15:55.528 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold&name=junior-toby
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_392)
+1 > Accept-Encoding: gzip,deflate
+
+
+00:15:56.334 [main] DEBUG com.intuit.karate - response time in milliseconds: 804
+1 < 200
+1 < Date: Fri, 12 Jan 2024 05:15:57 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":9223372016900013808,"category":{"id":0,"name":"string"},"name":"junior-toby","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":111111,"category":{"id":11111,"name":"string"},"name":"puppy","photoUrls":["string"],"tags":[{"id":111,"name":"string"}],"status":"sold"},{"id":9223372016900014348,"category":{"id":83089521,"name":"aute"},"name":"doggie","photoUrls":["esse ea dese","proident sunt non"],"tags":[{"id":-7333794,"name":"deserunt reprehenderit"},{"id":-49874740,"name":"consequat aliqua magna officia"}],"status":"sold"},{"id":12084391,"category":{"id":-48583,"name":"cupidatat amet commodo"},"name":"doggie","photoUrls":["fugiat Ut eu","exercitation nostr"],"tags":[{"id":-27183415,"name":"e"},{"id":86979382,"name":"in anim consectetur Lorem ut"}],"status":"sold"},{"id":9223372016900014381,"category":{"id":2299282,"name":"officia d"},"name":"doggie","photoUrls":["veniam ad","consectetur laboris anim"],"tags":[{"id":6282852,"name":"aliqua deserunt irure do Excepteur"},{"id":-79344316,"name":"dolor veniam non Ut"}],"status":"sold"}]
+00:15:56.409 [main] ERROR com.intuit.karate - src/test/java/features/GetStatusPet.feature:13
+Then match response.name == 'junior-toby'
+match failed: EQUALS
+  $ | actual path does not exist (STRING:STRING)
+  '#notpresent'
+  'junior-toby'
+
+src/test/java/features/GetStatusPet.feature:13
+00:15:57.060 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/features/GetStatusPet.feature
+00:16:26.153 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1705036586151
+00:16:26.180 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 9 - ^Consultar la mascota con estatus y nombre y status sold$
+00:16:27.354 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold&name=junior-toby
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_392)
+1 > Accept-Encoding: gzip,deflate
+
+
+00:16:28.043 [main] DEBUG com.intuit.karate - response time in milliseconds: 687
+1 < 200
+1 < Date: Fri, 12 Jan 2024 05:16:29 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":9223372016900013808,"category":{"id":0,"name":"string"},"name":"junior-toby","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":111111,"category":{"id":11111,"name":"string"},"name":"puppy","photoUrls":["string"],"tags":[{"id":111,"name":"string"}],"status":"sold"},{"id":9223372016900014348,"category":{"id":83089521,"name":"aute"},"name":"doggie","photoUrls":["esse ea dese","proident sunt non"],"tags":[{"id":-7333794,"name":"deserunt reprehenderit"},{"id":-49874740,"name":"consequat aliqua magna officia"}],"status":"sold"},{"id":12084391,"category":{"id":-48583,"name":"cupidatat amet commodo"},"name":"doggie","photoUrls":["fugiat Ut eu","exercitation nostr"],"tags":[{"id":-27183415,"name":"e"},{"id":86979382,"name":"in anim consectetur Lorem ut"}],"status":"sold"},{"id":9223372016900014381,"category":{"id":2299282,"name":"officia d"},"name":"doggie","photoUrls":["veniam ad","consectetur laboris anim"],"tags":[{"id":6282852,"name":"aliqua deserunt irure do Excepteur"},{"id":-79344316,"name":"dolor veniam non Ut"}],"status":"sold"}]
+00:16:28.197 [main] INFO  com.intuit.karate - [print] [
+  {
+    "id": 9223372016900013808,
+    "category": {
+      "id": 0,
+      "name": "string"
+    },
+    "name": "junior-toby",
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [
+      {
+        "id": 0,
+        "name": "string"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 111111,
+    "category": {
+      "id": 11111,
+      "name": "string"
+    },
+    "name": "puppy",
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [
+      {
+        "id": 111,
+        "name": "string"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 9223372016900014348,
+    "category": {
+      "id": 83089521,
+      "name": "aute"
+    },
+    "name": "doggie",
+    "photoUrls": [
+      "esse ea dese",
+      "proident sunt non"
+    ],
+    "tags": [
+      {
+        "id": -7333794,
+        "name": "deserunt reprehenderit"
+      },
+      {
+        "id": -49874740,
+        "name": "consequat aliqua magna officia"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 12084391,
+    "category": {
+      "id": -48583,
+      "name": "cupidatat amet commodo"
+    },
+    "name": "doggie",
+    "photoUrls": [
+      "fugiat Ut eu",
+      "exercitation nostr"
+    ],
+    "tags": [
+      {
+        "id": -27183415,
+        "name": "e"
+      },
+      {
+        "id": 86979382,
+        "name": "in anim consectetur Lorem ut"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 9223372016900014381,
+    "category": {
+      "id": 2299282,
+      "name": "officia d"
+    },
+    "name": "doggie",
+    "photoUrls": [
+      "veniam ad",
+      "consectetur laboris anim"
+    ],
+    "tags": [
+      {
+        "id": 6282852,
+        "name": "aliqua deserunt irure do Excepteur"
+      },
+      {
+        "id": -79344316,
+        "name": "dolor veniam non Ut"
+      }
+    ],
+    "status": "sold"
+  }
+]
+ 
+00:16:28.216 [main] ERROR com.intuit.karate - src/test/java/features/GetStatusPet.feature:15
+* match pet.name == 'junior-toby'
+match failed: EQUALS
+  $ | actual path does not exist (STRING:STRING)
+  '#notpresent'
+  'junior-toby'
+
+src/test/java/features/GetStatusPet.feature:15
+00:16:28.657 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/features/GetStatusPet.feature
+00:18:21.862 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1705036701861
+00:18:21.891 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 9 - ^Consultar la mascota con estatus y nombre y status sold$
+00:18:23.089 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold&name=junior-toby
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_392)
+1 > Accept-Encoding: gzip,deflate
+
+
+00:18:23.785 [main] DEBUG com.intuit.karate - response time in milliseconds: 694
+1 < 200
+1 < Date: Fri, 12 Jan 2024 05:18:25 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":9223372016900013808,"category":{"id":0,"name":"string"},"name":"junior-toby","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":111111,"category":{"id":11111,"name":"string"},"name":"puppy","photoUrls":["string"],"tags":[{"id":111,"name":"string"}],"status":"sold"},{"id":9223372016900014348,"category":{"id":83089521,"name":"aute"},"name":"doggie","photoUrls":["esse ea dese","proident sunt non"],"tags":[{"id":-7333794,"name":"deserunt reprehenderit"},{"id":-49874740,"name":"consequat aliqua magna officia"}],"status":"sold"},{"id":12084391,"category":{"id":-48583,"name":"cupidatat amet commodo"},"name":"doggie","photoUrls":["fugiat Ut eu","exercitation nostr"],"tags":[{"id":-27183415,"name":"e"},{"id":86979382,"name":"in anim consectetur Lorem ut"}],"status":"sold"},{"id":9223372016900014381,"category":{"id":2299282,"name":"officia d"},"name":"doggie","photoUrls":["veniam ad","consectetur laboris anim"],"tags":[{"id":6282852,"name":"aliqua deserunt irure do Excepteur"},{"id":-79344316,"name":"dolor veniam non Ut"}],"status":"sold"}]
+00:18:23.952 [main] ERROR com.intuit.karate - src/test/java/features/GetStatusPet.feature:14
+* match each petNames == 'junior-toby'
+match failed: EACH_EQUALS
+  $ | match each failed at index 1 (LIST:STRING)
+  ["junior-toby","puppy","doggie","doggie","doggie"]
+  'junior-toby'
+
+    $[1] | not equal (STRING:STRING)
+    'puppy'
+    'junior-toby'
+
+src/test/java/features/GetStatusPet.feature:14
+00:18:24.504 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/features/GetStatusPet.feature
+00:18:53.121 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1705036733120
+00:18:53.147 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 9 - ^Consultar la mascota con estatus y nombre y status sold$
+00:18:54.241 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold&name=junior-toby
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_392)
+1 > Accept-Encoding: gzip,deflate
+
+
+00:18:54.867 [main] DEBUG com.intuit.karate - response time in milliseconds: 624
+1 < 200
+1 < Date: Fri, 12 Jan 2024 05:18:56 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":9223372016900013808,"category":{"id":0,"name":"string"},"name":"junior-toby","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":111111,"category":{"id":11111,"name":"string"},"name":"puppy","photoUrls":["string"],"tags":[{"id":111,"name":"string"}],"status":"sold"},{"id":9223372016900014348,"category":{"id":83089521,"name":"aute"},"name":"doggie","photoUrls":["esse ea dese","proident sunt non"],"tags":[{"id":-7333794,"name":"deserunt reprehenderit"},{"id":-49874740,"name":"consequat aliqua magna officia"}],"status":"sold"},{"id":12084391,"category":{"id":-48583,"name":"cupidatat amet commodo"},"name":"doggie","photoUrls":["fugiat Ut eu","exercitation nostr"],"tags":[{"id":-27183415,"name":"e"},{"id":86979382,"name":"in anim consectetur Lorem ut"}],"status":"sold"},{"id":9223372016900014381,"category":{"id":2299282,"name":"officia d"},"name":"doggie","photoUrls":["veniam ad","consectetur laboris anim"],"tags":[{"id":6282852,"name":"aliqua deserunt irure do Excepteur"},{"id":-79344316,"name":"dolor veniam non Ut"}],"status":"sold"}]
+00:18:55.123 [main] INFO  com.intuit.karate - [print] [
+  {
+    "id": 9223372016900013808,
+    "category": {
+      "id": 0,
+      "name": "string"
+    },
+    "name": "junior-toby",
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [
+      {
+        "id": 0,
+        "name": "string"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 111111,
+    "category": {
+      "id": 11111,
+      "name": "string"
+    },
+    "name": "puppy",
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [
+      {
+        "id": 111,
+        "name": "string"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 9223372016900014348,
+    "category": {
+      "id": 83089521,
+      "name": "aute"
+    },
+    "name": "doggie",
+    "photoUrls": [
+      "esse ea dese",
+      "proident sunt non"
+    ],
+    "tags": [
+      {
+        "id": -7333794,
+        "name": "deserunt reprehenderit"
+      },
+      {
+        "id": -49874740,
+        "name": "consequat aliqua magna officia"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 12084391,
+    "category": {
+      "id": -48583,
+      "name": "cupidatat amet commodo"
+    },
+    "name": "doggie",
+    "photoUrls": [
+      "fugiat Ut eu",
+      "exercitation nostr"
+    ],
+    "tags": [
+      {
+        "id": -27183415,
+        "name": "e"
+      },
+      {
+        "id": 86979382,
+        "name": "in anim consectetur Lorem ut"
+      }
+    ],
+    "status": "sold"
+  },
+  {
+    "id": 9223372016900014381,
+    "category": {
+      "id": 2299282,
+      "name": "officia d"
+    },
+    "name": "doggie",
+    "photoUrls": [
+      "veniam ad",
+      "consectetur laboris anim"
+    ],
+    "tags": [
+      {
+        "id": 6282852,
+        "name": "aliqua deserunt irure do Excepteur"
+      },
+      {
+        "id": -79344316,
+        "name": "dolor veniam non Ut"
+      }
+    ],
+    "status": "sold"
+  }
+]
+ 
+00:18:55.564 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/features/GetStatusPet.feature
+00:21:11.392 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1705036871391
+00:21:11.418 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 9 - ^Consultar la mascota con estatus y filtrar por nombre$
+00:21:12.576 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_392)
+1 > Accept-Encoding: gzip,deflate
+
+
+00:21:13.394 [main] DEBUG com.intuit.karate - response time in milliseconds: 814
+1 < 200
+1 < Date: Fri, 12 Jan 2024 05:21:14 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+[{"id":9223372016900013808,"category":{"id":0,"name":"string"},"name":"junior-toby","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":111111,"category":{"id":11111,"name":"string"},"name":"puppy","photoUrls":["string"],"tags":[{"id":111,"name":"string"}],"status":"sold"},{"id":9223372016900014348,"category":{"id":83089521,"name":"aute"},"name":"doggie","photoUrls":["esse ea dese","proident sunt non"],"tags":[{"id":-7333794,"name":"deserunt reprehenderit"},{"id":-49874740,"name":"consequat aliqua magna officia"}],"status":"sold"},{"id":12084391,"category":{"id":-48583,"name":"cupidatat amet commodo"},"name":"doggie","photoUrls":["fugiat Ut eu","exercitation nostr"],"tags":[{"id":-27183415,"name":"e"},{"id":86979382,"name":"in anim consectetur Lorem ut"}],"status":"sold"},{"id":9223372016900014381,"category":{"id":2299282,"name":"officia d"},"name":"doggie","photoUrls":["veniam ad","consectetur laboris anim"],"tags":[{"id":6282852,"name":"aliqua deserunt irure do Excepteur"},{"id":-79344316,"name":"dolor veniam non Ut"}],"status":"sold"}]
+00:21:13.568 [main] INFO  com.intuit.karate - [print] [
+  {
+    "id": 9223372016900013808,
+    "category": {
+      "id": 0,
+      "name": "string"
+    },
+    "name": "junior-toby",
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [
+      {
+        "id": 0,
+        "name": "string"
+      }
+    ],
+    "status": "sold"
+  }
+]
+ 
+00:21:14.061 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/features/GetStatusPet.feature

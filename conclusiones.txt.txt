@@ -1,0 +1,22 @@
+Hallazgos y Conclusiones
+Durante la ejecución de las pruebas, se observaron los siguientes hallazgos:
+
+Caso de Uso 1: Agregar una mascota
+
+Se ejecutó correctamente.
+El nombre de la mascota se registró como "junior1".
+La mascota se marcó como "available".
+Caso de Uso 2: Buscar por ID la mascota
+
+Se ejecutó correctamente.
+La mascota con el ID específico se encontró y se obtuvo la información correctamente.
+Caso de Uso 3: Actualizar el nombre y estatus de la mascota
+
+Se ejecutó correctamente.
+El nombre de la mascota se actualizó a "junior-toby".
+El estatus de la mascota se actualizó a "sold".
+
+Conclusiones Generales:
+
+Todas las pruebas automatizadas se ejecutaron exitosamente.
+Se validaron correctamente los escenarios de agregar, buscar por ID y actualizar mascotas en Swagger Petstore.
