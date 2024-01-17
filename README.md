@@ -18,3 +18,22 @@ Asegúrate de tener instalado lo siguiente en tu máquina local:
    ```bash
    git clone https://github.com/23456-Tony-Larrea/NTTDATA-API-QA-CHALLENGE)https://github.com/23456-Tony-Larrea/NTTDATA-API-QA-CHALLENGE
    cd NTTDATA-API-QA-CHALLENGE
+ 2. **Ejecuta el comando para instalar las dependencias:**
+
+   ```bash
+   gradle clean build
+   ```
+3. **Ejecuta el comando para ejecutar las pruebas:**
+
+   ```bash
+   insertar una nueva mascota
+   ./gradlew test --tests KarateRunner.testGetStatusPet
+   obtener una mascota por su id
+    ./gradlew test --tests KarateRunner.testGetPetById
+    obtener una mascota por su estado sold
+    ./gradlew test --tests KarateRunner.testGetStatusPet
+   actualizar el nombre de una mascota y su estado a sold
+    ./gradlew test --tests KarateRunner.testUpdatePet
+    ```
+
+   
