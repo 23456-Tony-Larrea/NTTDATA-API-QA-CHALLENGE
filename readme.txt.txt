@@ -16,6 +16,16 @@ Asegúrate de tener instalado:
  git clone https://github.com/23456-Tony-Larrea/NTTDATA-API-QA-CHALLENGE
  cd NTTDATA-API-QA-CHALLENGE
 
+ ## Ejecucion de pruebas por terminal
+ //insetar una nueva mascota
+./gradlew test --tests KarateRunner.testInsertPet
+//actualizar una mascota
+./gradlew test --tests KarateRunner.testUpdatePet
+//obtener una mascota por id
+./gradlew test --tests KarateRunner.testGetPetById
+ //obtener el estado de las mascotas en sold
+ ./gradlew test --tests KarateRunner.testGetStatusPet
+
 
 
 Instrucciones para Ejecutar los Test

@@ -3,7 +3,7 @@ Feature: Actualizar el nombre de la mascota y el estatus de la mascota a “sold
   Background:
     * def urlBase = 'https://petstore.swagger.io/v2'
     * def petPath = '/pet'
-    * def petId = '9223372016900013808'
+    * def petId = '9223372036854767921'
   Scenario: Actualizar el nombre de la mascota y el estatus de la mascota a “sold”
         Given url urlBase + petPath + '/' + petId
         And param petId = petId

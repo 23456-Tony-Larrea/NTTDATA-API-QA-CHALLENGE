@@ -25,3 +25,4 @@ sourceSets {
 tasks.test {
     useJUnitPlatform()
 }
+
