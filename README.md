@@ -27,13 +27,13 @@ Asegúrate de tener instalado lo siguiente en tu máquina local:
 
    ```bash
    insertar una nueva mascota
-   ./gradlew test --tests KarateRunner.testGetStatusPet
+   ./gradlew test --tests KarateRunner.testInsertPet
    obtener una mascota por su id
     ./gradlew test --tests KarateRunner.testGetPetById
-    obtener una mascota por su estado sold
-    ./gradlew test --tests KarateRunner.testGetStatusPet
    actualizar el nombre de una mascota y su estado a sold
     ./gradlew test --tests KarateRunner.testUpdatePet
+    obtener una mascota por su estado sold
+    ./gradlew test --tests KarateRunner.testGetStatusPet
     ```
 
    
