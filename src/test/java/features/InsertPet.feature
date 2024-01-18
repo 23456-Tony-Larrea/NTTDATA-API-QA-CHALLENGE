@@ -9,5 +9,5 @@ Feature: Agregar una mascota en swagger
     And request jsonData
     When method post
     Then status 200
-  And match response.name == "junior1"
+  And match response.name == "doggie"
   And match response.status == "available"
