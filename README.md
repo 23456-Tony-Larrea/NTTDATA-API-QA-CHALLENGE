@@ -26,12 +26,8 @@ Asegúrate de tener instalado lo siguiente en tu máquina local:
 3. **Ejecuta el comando para ejecutar las pruebas:**
 
    ```bash
-   insertar una nueva mascota
-   ./gradlew test --tests KarateRunner.testInsertPet
-   obtener una mascota por su id
-    ./gradlew test --tests KarateRunner.testGetPetById
-   actualizar el nombre de una mascota y su estado a sold
-    ./gradlew test --tests KarateRunner.testUpdatePet
+   insertar una nueva mascota , obtener una mascota por su id ,actualizar el nombre de una mascota y su estado a sold
+   ./gradlew test --tests KarateRunner.testCRUPet
     obtener una mascota por su estado sold
     ./gradlew test --tests KarateRunner.testGetStatusPet
     ```
