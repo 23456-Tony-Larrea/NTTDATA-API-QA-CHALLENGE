@@ -17,12 +17,8 @@ Asegúrate de tener instalado:
  cd NTTDATA-API-QA-CHALLENGE
 
  ## Ejecucion de pruebas por terminal
- //insetar una nueva mascota
-./gradlew test --tests KarateRunner.testInsertPet
-//actualizar una mascota
-./gradlew test --tests KarateRunner.testUpdatePet
-//obtener una mascota por id
-./gradlew test --tests KarateRunner.testGetPetById
+ //insetar una nueva mascota , obtener una mascota por id,actualizar una mascota
+./gradlew test --tests KarateRunner.CRUPet
  //obtener el estado de las mascotas en sold
  ./gradlew test --tests KarateRunner.testGetStatusPet
 
